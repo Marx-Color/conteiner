@@ -7,12 +7,15 @@
     <style>
         div.container {
             border: 3px solid rgb(20, 27, 212);
-            height: 250px;
             display: grid;
-             grid-template: repeat(3, auto) / repeat(3, auto); /* Mudança no uso da tag */
-            gap: 10px; /* Espaçamento entre os itens, mudança no uso da tag */
-            place-items:start center; /* Mudança no uso da tag */
-            place-content: space-between end; /* Mudança no uso da tag */            
+            grid-template-rows: repeat(3, 80px); 
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-auto-flow: row;;
+            grid-auto-rows: 80px;
+            grid-auto-columns: 120px; 
+            gap: 10px; 
+            place-items: stretch stretch; 
+            place-content: stretch stretch;       
         }
         div.item {
             border: 3px solid rgb(212, 20, 20);
@@ -31,6 +34,8 @@
         <div class="item">F</div>
         <div class="item">G</div>
         <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
     </div>
 </body>
 </html>
